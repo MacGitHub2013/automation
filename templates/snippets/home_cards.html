@@ -1,0 +1,87 @@
+ {% load static %}
+ <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+             <h3 class="card-title"><img src="{% static 'images/organize.png' %}" > Organize Data</h3>
+            <p class="card-text"> Office automation places all data and communication in one place.
+             This keeps the data nicely organized and easy to search and access.  </p>
+          </div>
+          <div class="card-footer">
+  <a  class="btn btn-success btn-sm" href="#" data-toggle="modal" data-target="#logoutModal">I am Interesed!</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+              <h3 class="card-title"><img src="{% static 'images/save_time.png' %}" >Save Time</h3>
+            <p class="card-text">Automate repetitive tasks, 
+            free yourself and your team from the time you spend on recurring manual team and organizational processes.</p>
+          </div>
+          <div class="card-footer">
+              <a  class="btn btn-success btn-sm" href="#" data-toggle="modal" data-target="#logoutModal">I am Interesed!</a>
+
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+         
+          <div class="card-body">
+           <h3 class="card-title"><img src="{% static 'images/save_money.png' %}" >Save Money</h3>
+            <p class="card-text">Office automation allows for less human error,
+             which means more accuracy and less work redoing tasks and processes.</p>
+          </div>
+          <div class="card-footer">
+            <a  class="btn btn-success btn-sm" href="#" data-toggle="modal" data-target="#logoutModal">I am Interesed!</a>
+
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+    </div>
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <form method="POST" action="{% url 'pages:contact' %}" >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-success">
+            <h5 class="modal-title text-light " id="exampleModalLabel">Leave your email address, we'll get in touch with you soon. Thank You!</h5>
+           
+          </div>
+          <div class="modal-body">
+            
+              {{form.errors}}
+              {% csrf_token %}
+              <div class="form-group">
+                <div class="form-label-group">
+                    <label for="inputName">Name</label>
+                  <input type="text" name="name" id="inputName" class ="form-control", placeholder="Name" required = "required" autofocus ="autofocus" >
+                  
+                </div>
+                <div class="form-label-group">
+                    <label for="inputEmail">Email address</label>
+                  <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" >
+                  
+                </div>
+                <div class="form-label-group">
+                    <label for="inputComments" >Comments</label>
+                  <textarea id="inputComments" name="comments"  class="form-control" placeholder="Comments" required="required" ></textarea>
+                  
+                </div>
+              </div>
+           
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button"  data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-success"  >Submit</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+
+
