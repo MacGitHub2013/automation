@@ -1,68 +1,163 @@
-
 {% extends 'base.html' %}
+{% block title %}{{block.super}} | Services {% endblock %}
+{% block container %} {% load static %}
 
-{% block container %}
-
-{% load static %}
-
-<div class="container">
-
-<div id="content">         
+<div class="container mt-2">
+  <div id="content">
     <div class="post" id="post-12">
-        <div class="storycontent">
-            <h1><img class="alignleft  wp-image-89" title="microsoftAutomation" src="http://visualintegrators.com/wp-content/uploads/2012/03/microsoftAutomation.png" alt="Microsoft Automation">Microsoft Office Automation</h1>
-            <p>Microsoft Office applications can communicate with each other or other systems to streamline workflow within your business.&nbsp; Below are some examples of automation that can be done in Microsoft Office.</p>
-            <h3> <img src="{% static 'images/access.png' %}" /><strong>Microsoft Access</strong></h3> 
-            <ul>
-                <li>Build custom applications to track any type of information your company needs: Contacts, Appointments, Sales, Employees, Expenses, Telemarketing, Service, Human Resources, Ordering, Inventory, Engineering, etc</li>
-                <li>Send automated emails from access on scheduled time </li>
-                <li>Create Word documents on the fly to populate letters, envelopes and custom reports based on data in a database</li>
-                <li>Create functionality that can open up a Word template, fill the document with data, print the document and save the document with 1 click of a button</li>
-                <li>Create functionality that can open up an Excel spreadsheet and populate it with data</li>
-                <li>Create functionality that can open up an Excel spreadsheet and populate it with information as well as determine where to insert/delete rows if needed to keep the integrity of formulas in tact</li>
-               
-            </ul>
-            <h3> <img src="{% static 'images/excel.png' %}" /> <strong>Microsoft Excel</strong></h3>
+      <div class="storycontent">
+        <h1>
+          <img class="alignleft  wp-image-89" title="microsoftAutomation"
+            src="http://visualintegrators.com/wp-content/uploads/2012/03/microsoftAutomation.png"
+            alt="Microsoft Automation" />Microsoft Office Automation
+        </h1>
+        <p>
+          Microsoft Office applications can communicate with each other or other
+          systems to streamline workflow within your business.&nbsp; Below are
+          some examples of automation that can be done in Microsoft Office.
+        </p>
+        <h3>
+          <img src="{% static 'images/access.png' %}" /><strong>Microsoft Access</strong>
+        </h3>
+        <ul>
+          <li>
+            Build custom applications to track any type of information your
+            company needs: Contacts, Appointments, Sales, Employees, Expenses,
+            Telemarketing, Service, Human Resources, Ordering, Inventory,
+            Engineering, etc
+          </li>
+          <li>Send automated emails from access on scheduled time</li>
+          <li>
+            Create Word documents on the fly to populate letters, envelopes and
+            custom reports based on data in a database
+          </li>
+          <li>
+            Create functionality that can open up a Word template, fill the
+            document with data, print the document and save the document with 1
+            click of a button
+          </li>
+          <li>
+            Create functionality that can open up an Excel spreadsheet and
+            populate it with data
+          </li>
+          <li>
+            Create functionality that can open up an Excel spreadsheet and
+            populate it with information as well as determine where to
+            insert/delete rows if needed to keep the integrity of formulas in
+            tact
+          </li>
+        </ul>
+        <h3>
+          <img src="{% static 'images/excel.png' %}" />
+          <strong>Microsoft Excel</strong>
+        </h3>
 
-            <ul>
-                <li>Create worksheets that have to be validated before the system lets the user save the spreadsheet</li>
-                <li>Create worksheets that can read information from another system (i.e. database) to populate dropdown boxes, etc</li>
-                <li>Create company expense report that saves the information into a database for summary/analysis purposes</li>
-                <li>Combine data from multiple Excels spreadsheets/worksheets to create a new formatted Excel spreadsheet</li>
-                <li>Create automations that can open a master spreadsheet with many tabs and determine which of the tabs (single or multiple) need to be populated with data and which tabs need to be removed from the spreadsheet if they aren’t needed</li>
-                <li>Create automations to eliminate people having to re-key/massage/format data</li>
-            </ul>
-            <h3><img src="{% static 'images/word.png' %}" />  <strong>Microsoft Word</strong></h3>
-            
-            <ul>
-                <li>Create documents that can read information from another system (i.e. database) to populate dropdown boxes, etc</li>
-                <li>Create documents that have to be validated before the system lets the user save the document</li>
-                <li>Create documents that upon saving can save the information on the document into a database</li>
-                <li>Create documents that can popup and format an Outlook email with data from the document to be sent out upon saving a document</li>
-                </ul>
-            <h3><img src="{% static 'images/outlook.png' %}" /> <strong>Microsoft Outlook</strong></h3>
-            <ul>
-                <li>Process incoming emails and store information in database or reply automatically</li>
-                <li>Create custom forms that can be validated before sending to a person/group</li>
-                <li>Create custom forms that can save information on the form to an Excel spreadsheet or database</li>
-            </ul>
-            
-            <h3><img src="{% static 'images/powerpoint.png' %}" /> <strong>Microsoft Powerpoint</strong></h3>
-            <ul>
-                <li>Create powerpoint presentation from excel</li>
-                <li>Autofill powerpoint presentation and email</li>
-                <li>Generate multiple powerpoint presentation on click of a button</li>
-            </ul>
-           
-            <h3><img src="{% static 'images/pdf.png' %}" /> <strong>Adobe Acrobat PDF automation within Microsoft Office products</strong></h3>
-            <ul>
-                <li>Automate the process of retrieving an editable PDF, populating the document with data with information from an existing document/database and save the PDF with a single click of a button.</li>
-                <li>Automate the process of taking multiple PDF files and merging them together in a particular order and saving the new PDF with a single click of a button.</li>
-                <li>Automate the process of extracting a portion of a PDF file and placing the page(s) into a new or existing PDF file.</li>
-            </ul>
-        </div>
+        <ul>
+          <li>
+            Create worksheets that have to be validated before the system lets
+            the user save the spreadsheet
+          </li>
+          <li>
+            Create worksheets that can read information from another system
+            (i.e. database) to populate dropdown boxes, etc
+          </li>
+          <li>
+            Create company expense report that saves the information into a
+            database for summary/analysis purposes
+          </li>
+          <li>
+            Combine data from multiple Excels spreadsheets/worksheets to create
+            a new formatted Excel spreadsheet
+          </li>
+          <li>
+            Create automations that can open a master spreadsheet with many tabs
+            and determine which of the tabs (single or multiple) need to be
+            populated with data and which tabs need to be removed from the
+            spreadsheet if they aren’t needed
+          </li>
+          <li>
+            Create automations to eliminate people having to
+            re-key/massage/format data
+          </li>
+        </ul>
+        <h3>
+          <img src="{% static 'images/word.png' %}" />
+          <strong>Microsoft Word</strong>
+        </h3>
+
+        <ul>
+          <li>
+            Create documents that can read information from another system (i.e.
+            database) to populate dropdown boxes, etc
+          </li>
+          <li>
+            Create documents that have to be validated before the system lets
+            the user save the document
+          </li>
+          <li>
+            Create documents that upon saving can save the information on the
+            document into a database
+          </li>
+          <li>
+            Create documents that can popup and format an Outlook email with
+            data from the document to be sent out upon saving a document
+          </li>
+        </ul>
+        <h3>
+          <img src="{% static 'images/outlook.png' %}" />
+          <strong>Microsoft Outlook</strong>
+        </h3>
+        <ul>
+          <li>
+            Process incoming emails and store information in database or reply
+            automatically
+          </li>
+          <li>
+            Create custom forms that can be validated before sending to a
+            person/group
+          </li>
+          <li>
+            Create custom forms that can save information on the form to an
+            Excel spreadsheet or database
+          </li>
+        </ul>
+
+        <h3>
+          <img src="{% static 'images/powerpoint.png' %}" />
+          <strong>Microsoft Powerpoint</strong>
+        </h3>
+        <ul>
+          <li>Create powerpoint presentation from excel</li>
+          <li>Autofill powerpoint presentation and email</li>
+          <li>
+            Generate multiple powerpoint presentation on click of a button
+          </li>
+        </ul>
+
+        <h3>
+          <img src="{% static 'images/pdf.png' %}" />
+          <strong>Adobe Acrobat PDF automation within Microsoft Office
+            products</strong>
+        </h3>
+        <ul>
+          <li>
+            Automate the process of retrieving an editable PDF, populating the
+            document with data with information from an existing
+            document/database and save the PDF with a single click of a button.
+          </li>
+          <li>
+            Automate the process of taking multiple PDF files and merging them
+            together in a particular order and saving the new PDF with a single
+            click of a button.
+          </li>
+          <li>
+            Automate the process of extracting a portion of a PDF file and
+            placing the page(s) into a new or existing PDF file.
+          </li>
+        </ul>
+      </div>
     </div>
-</div>
+  </div>
 </div>
 
 {% endblock container %}

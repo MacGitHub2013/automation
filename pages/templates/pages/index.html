@@ -1,45 +1,57 @@
-{% extends 'base.html' %}
-
-{% block container %}
-
-{% load static %}
- 
+{% extends 'base.html' %} {% block container %} {% load static %}
 
 <div class="container">
-
-    <!-- Heading Row -->
-    <div class="row align-items-center my-5">
-      <div class="col-lg-7">
-        <img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'images/mainpage.jpeg' %}" alt="">
-      </div>
-      <!-- /.col-lg-8 -->
-      <div class="col-lg-5">
-        <h1 class="font-weight-light">Empower Your Business With Automated Processes</h1>
-        <p>Be digital organize data and communication, save time, save money, reduce errors and more importantly free up yourself and your team to focus more on bussiness rather than doing repeated tasks </p>
-        <a class="btn btn-success" href="{% url 'pages:services' %}">Read more</a>
-      </div>
-      <!-- /.col-md-4 -->
+  <!-- Heading Row -->
+  <div class="row align-items-center my-5">
+    <div class="col-lg-7">
+      <img
+        class="img-fluid rounded mb-4 mb-lg-0"
+        src="{% static 'images/mainpage.jpeg' %}"
+        alt=""
+      />
     </div>
-    <!-- /.row -->
-
-    <!-- Call to Action Well -->
-    <div class="card text-white bg-secondary my-3 py-2 text-center bg-info">
-      <div class="card-body ">
-        <p class="text-white m-0">Imagine sending an email to a bot-mailbox to genrate a report. Imagine clicking a button to send hundreds of emails from an excel sheet</p>
-      </div>
+    <!-- /.col-lg-8 -->
+    <div class="col-lg-5">
+      <h1 class="font-weight-light">
+        Empower Your Business With Automated Processes
+      </h1>
+      <p>
+        Be digital organize data and communication, save time, save money,
+        reduce errors and more importantly free up yourself and your team to
+        focus more on bussiness rather than doing repeated tasks
+      </p>
+      <a class="btn btn-success" href="{% url 'pages:services' %}">Read more</a>
+      <a
+        class="btn btn-success "
+        href="#"
+        data-toggle="modal"
+        data-target="#logoutModal"
+        >Request Free Quote</a
+      >
     </div>
-
-    <!-- cards -->
-   {% include 'snippets/home_cards.html' %}
-    <!-- testimonial -->
-    <hr class="my-5"/>
-
-    {% include 'snippets/home_howitworks.html' %}
-    <hr class="my-5" />
-   {% include 'snippets/home_testimonials.html' %}
-   
+    <!-- /.col-md-4 -->
   </div>
-  <!-- /.container -->
+  <!-- /.row -->
 
+  <!-- Call to Action Well -->
+  <div class="card text-white bg-secondary my-3 py-2 text-center bg-info">
+    <div class="card-body ">
+      <p class="text-white m-0">
+        Imagine sending an email to a bot-mailbox to genrate a report. Imagine
+        clicking a button to send hundreds of emails from an excel sheet
+      </p>
+    </div>
+  </div>
+
+  <!-- cards -->
+  {% include 'snippets/home_cards.html' %}
+  <!-- testimonial -->
+  <hr class="my-5" />
+
+  {% include 'snippets/home_howitworks.html' %}
+  <hr class="my-5" />
+  {% include 'snippets/home_testimonials.html' %}
+</div>
+<!-- /.container -->
 
 {% endblock container %}

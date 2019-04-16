@@ -20,12 +20,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'dr4++(oxdpq-a&_nsm56^^t37x#4c9by&f6-e9f$8%@)**2xay'
+SECRET_KEY = 'dkhjkhr4++(oxdpq-a&_nsm56^^t37x#4c9by&f6-e9f$8%@)**2xay'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
+if DEBUG == True:
+    ALLOWED_HOSTS = []
+else:
+    ALLOWED_HOSTS = ['www.biome.consulting']
 
 
 # Application definition
@@ -37,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pages'
+    'pages',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -48,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'automation.urls'
@@ -74,13 +78,26 @@ WSGI_APPLICATION = 'automation.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+if DEBUG == True:
 
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+else:
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'biommcwj_automation',
+            'HOST': 'server232.web-hosting.com',
+            'USER': 'biommcwj_root',
+            'PASSWORD': 'New2019*'
+
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -118,8 +135,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
-]
+STATIC_URL = '/static/'
+MEDIA = '/media/'
+MEDIA_ROOT = '/home/biommcwj/public_html/media'
+STATIC_ROOT = '/home/biommcwj/public_html/static'
+STATICFILES_DIRS = [BASE_DIR + '/static/', ]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
