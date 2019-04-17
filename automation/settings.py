@@ -20,10 +20,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'dkhjkhr4++(oxdpq-a&_nsm56^^t37x#4c9by&f6-e9f$8%@)**2xay'
+SECRET_KEY = 'dkhjkhr4+wewe+(oxdpq-a&_nsm56^^t37x#4c9by&f6-e9f$8%@)**2xay'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 if DEBUG == True:
     ALLOWED_HOSTS = []
 else:
@@ -135,6 +135,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'server232.web-hosting.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'biommcwj'
+EMAIL_HOST_PASSWORD = 'Biome@2019*'
+DEFAULT_FROM_EMAIL = 'info@biome.consulting'
+SERVER_EMAIL = 'info@biome.consulting'
+EMAIL_USE_TLS = True
+ADMINS = [('John', 'info@biome.consulting'), ]
 
 STATIC_URL = '/static/'
 MEDIA = '/media/'
