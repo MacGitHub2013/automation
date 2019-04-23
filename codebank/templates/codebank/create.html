@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}{{block.super}} | Add Code {% endblock %}
+{% block container %}
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="text-danger">
+        {{form.non_field_errors }}
+
+    </div>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name='title' id='title' class="form-control" />
+        <div class="bg-warning text-muted">
+            {{form.title.errors}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="desc">Description</label>
+        <textarea type="text" name="desc" id="desc" rows="3" class="form-control"></textarea>
+        <div class="bg-warning text-muted">
+            {{form.desc.errors}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="code">Code</label>
+        <textarea id="code" name="code" class="form-control" rows="4"></textarea>
+        <div class="bg-warning text-muted">
+            {{form.code.errors}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="link">Reference</label>
+        <input type="url" name="link" id="link" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="tags">Tags - user ';' as sperator</label>
+        <input type="text" name="tags" id="tags" class="form-control">
+        <div class="bg-warning text-muted">
+            form.tags.errors
+        </div>
+    </div>
+
+    <button class="btn-primary">Submit</button>
+</form>
+<hr />
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}{{block.super}} | Code Bank {% endblock %}
+
+{% block container %}
+
+<a class="btn btn-primary my-4" role="button" href="{% url 'codebank:create' %}">Add Code</a>
+{% for object in object_list %}
+<div>
+    <h3>
+        {{object.title}}
+    </h3>
+    <p>
+        {{object.desc}}
+    </p>
+    <p class=" pre-scrollable">
+        <pre class="bg-light py-2 px-4  ">
+        <code>
+            {{object.code}}
+        </code>
+        </pre>
+        <a href="{% url 'codebank:update' object.id %}">edit</a>
+    </p>
+
+
+
+</div>
+{% endfor %}
+
+
+{% endblock %}
