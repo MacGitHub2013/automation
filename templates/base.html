@@ -44,13 +44,15 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script>
-    // $(document).ready(function () {
+    $(document).ready(function () {
 
-    //   $(".navbar-nav li").on("click", function () {
-    //     $(".navbar-nav li").removeClass("active");
-    //     $(this).addClass("active");
-    //   })
-    // })
+      $(".del").on("click", function () {
+
+        $("#frm_delete").attr('action', this.href)
+
+
+      })
+    })
 
   </script>
 

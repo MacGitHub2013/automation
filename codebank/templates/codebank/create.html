@@ -10,21 +10,21 @@
     </div>
     <div class="form-group">
         <label for="title">Title</label>
-        <input type="text" name='title' id='title' class="form-control" />
+        <input type="text" name='title' id='title' required class="form-control" />
         <div class="bg-warning text-muted">
             {{form.title.errors}}
         </div>
     </div>
     <div class="form-group">
         <label for="desc">Description</label>
-        <textarea type="text" name="desc" id="desc" rows="3" class="form-control"></textarea>
+        <textarea type="text" name="desc" id="desc" required rows="3" class="form-control"></textarea>
         <div class="bg-warning text-muted">
             {{form.desc.errors}}
         </div>
     </div>
     <div class="form-group">
         <label for="code">Code</label>
-        <textarea id="code" name="code" class="form-control" rows="4"></textarea>
+        <textarea id="code" name="code" class="form-control" required rows="4"></textarea>
         <div class="bg-warning text-muted">
             {{form.code.errors}}
         </div>
@@ -35,9 +35,9 @@
     </div>
     <div class="form-group">
         <label for="tags">Tags - user ';' as sperator</label>
-        <input type="text" name="tags" id="tags" class="form-control">
+        <input type="text" name="tags" id="tags" required class="form-control">
         <div class="bg-warning text-muted">
-            form.tags.errors
+            {{form.tags.errors}}
         </div>
     </div>
 

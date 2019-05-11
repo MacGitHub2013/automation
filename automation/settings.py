@@ -23,11 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'dkhjkhr4+wewe+(oxdpq-a&_nsm56^^t37x#4c9by&f6-e9f$8%@)**2xay'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 if DEBUG == True:
     ALLOWED_HOSTS = []
 else:
-    ALLOWED_HOSTS = ['www.biome.consulting']
+    ALLOWED_HOSTS = ['http://biome.consulting',
+                     'www.biome.consulting', 'biome.consulting']
 
 
 # Application definition
@@ -41,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages',
     'codebank',
-    'crispy_forms'
+    'crispy_forms',
+    'user_profile'
 ]
 
 MIDDLEWARE = [
@@ -152,3 +154,5 @@ MEDIA_ROOT = '/home/biommcwj/public_html/media'
 STATIC_ROOT = '/home/biommcwj/public_html/static'
 STATICFILES_DIRS = [BASE_DIR + '/static/', ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
